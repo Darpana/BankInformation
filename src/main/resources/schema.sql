@@ -18,4 +18,4 @@ CREATE TABLE bank_branches
   district,
   state
 FROM 
-CSVREAD('/Users/z00295w/Public/Dev/source/BankInformation/src/main/resources/bank_branches.csv');
+CSVREAD('src/main/resources/bank_branches.csv');

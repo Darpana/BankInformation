@@ -18,13 +18,13 @@ public class BankDetailsController {
 	
 	@GetMapping("/api/bank/{ifsc}")
 	public BankBranches getBranchDetails(@PathVariable("ifsc") String ifsc){
-		BankBranches bb = bs.getbranchDetails(String.valueOf(ifsc).toUpperCase());
+		BankBranches bb = bs.getbranchDetails(String.valueOf(ifsc).replace("%20", " ").toUpperCase());
 		return bb;
 	}
 	
 	@GetMapping("/api/bank/{bankName}/{city}")
 	public List<BankBranches> getBranchDetails(@PathVariable("bankName") String bankName, @PathVariable("city") String city){
-		List<BankBranches> bb = bs.getbankbranchDetails(bankName.toUpperCase(), city.toUpperCase());
+		List<BankBranches> bb = bs.getbankbranchDetails(bankName.replace("%20", " ").toUpperCase(), city.replace("%20", " ").toUpperCase());
 		return bb;
 	}
 }
