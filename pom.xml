@@ -70,7 +70,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.bankinfo.BankInformation</mainClass>
+            <mainClass>com.bankinfo.BankInformation.BankInformationApp</mainClass>
           </manifest>
         </archive>
       </configuration>
